@@ -53,3 +53,9 @@ background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 }
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
