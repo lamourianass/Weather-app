@@ -39,3 +39,8 @@ form input[type="submit"] {
   cursor: pointer;
   outline: none;
 }
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+  background-color: #0062cc;
+}
