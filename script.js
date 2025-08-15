@@ -5,4 +5,5 @@ const formEl = document.querySelector('form')
 
 formEl.addEventListener('submit', (e) => {
   e.preventDefault()
+  const cityValue = cityInputEl.value
 })
