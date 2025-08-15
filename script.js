@@ -22,16 +22,18 @@ async function getWeatherData(cityValue) {
     const icon = data.weather[0].icon
 
     const details = [
-      `Feels like: ${Math.round(data.main.feels_like)}`,
-      `Humidity: ${data.main.humidity}`,
-      `Wind speed: ${data.wind.speed}`,
+      `Feels like: ${Math.round(data.main.feels_like)}°C`,
+      `Humidity: ${data.main.humidity}%`,
+      `Wind speed: ${data.wind.speed}m/s`,
     ]
     weatherDataEl.querySelector(".icon").innerHTML = `
     <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${description}">
   `
     weatherDataEl.querySelector(".temperature").textContent = `${temperature}°C`
     weatherDataEl.querySelector(".description").textContent = `${description}`
-    
+    weatherDataEl.querySelector(".details").innerHTML = details.map((detail) => `
+    <div>${detail}</div>`).join("")
+
   } catch (error) {
 
   }
