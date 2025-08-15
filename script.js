@@ -11,7 +11,7 @@ formEl.addEventListener('submit', (e) => {
 
 function getWeatherData(cityValue) {
   try {
-    
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}`)
   } catch (error) {
 
   }
