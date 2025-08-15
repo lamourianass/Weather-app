@@ -9,9 +9,13 @@ formEl.addEventListener('submit', (e) => {
   getWeatherData(cityValue)
 })
 
-function getWeatherData(cityValue) {
+async function getWeatherData(cityValue) {
   try {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}`)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`)
+    if (!response.ok) {
+      throw new Error("Network response was not ok")
+    }
+    
   } catch (error) {
 
   }
