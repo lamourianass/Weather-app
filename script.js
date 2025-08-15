@@ -30,6 +30,8 @@ async function getWeatherData(cityValue) {
     <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${description}">
   `
     weatherDataEl.querySelector(".temperature").textContent = `${temperature}°C`
+    weatherDataEl.querySelector(".description").textContent = `${description}`
+    
   } catch (error) {
 
   }
